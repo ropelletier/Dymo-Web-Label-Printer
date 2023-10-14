@@ -12,3 +12,6 @@ make
 
 sudo ufw allow "Apache Full"
 sudo mysql_secure_installation
+
+git clone https://github.com/ropelletier/Dymo-Web-Label-Printer.git
+cp -r Dymo-Web-Label-Printer/* /var/www/html/
