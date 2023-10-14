@@ -2,9 +2,13 @@
 #https://www.reddit.com/r/dymo/comments/14zv98i/how_to_use_dymo_5xl_on_linux_ubuntu_based_distros/
 apt update
 git clone https://github.com/dymosoftware/Drivers
-apt-get install libboost-all-dev build-essential autotools-dev libcups2-dev libcupsimage2-dev cups -y
-
+apt install libboost-all-dev build-essential autotools-dev libcups2-dev libcupsimage2-dev cups apache2 php libapache2-mod-php php-mysql mysql-server -y
 
 bash ./configure
 autoreconf -ivf
 make
+
+
+
+sudo ufw allow "Apache Full"
+sudo mysql_secure_installation
